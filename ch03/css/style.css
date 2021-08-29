@@ -1,0 +1,125 @@
+@import url(sanitize.css);
+@import url('https://fonts.googleapis.com/css?family=Roboto');
+
+body {
+  background-color: #f0f0f0; /* 背景色をグレーに */
+  padding: 10px;
+  font-size: 14px;
+  color: #666; /* 文字の色を、濃いめのグレーに */
+}
+
+.container {
+  max-width: 1680px;
+  margin: 0 auto; /* 左右の余白をautoにして左右中央揃えに */
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+}
+
+header {
+  background-color: #422814; /* 背景色を茶色に */
+  padding: 10px;
+  color: #fff; /* 文字色を白に */
+}
+
+header h1 {
+  margin: 0;
+  font-size: 24px;
+  font-weight: normal; /* 文字の大きさを大きくしない */
+  text-align: center;
+  font-family: 'Roboto', sans-serif;
+}
+
+.information h1 {
+  font-size: 18px;
+  margin: 0 10px 10px 0; /* 余白を下と右に10pxずつ */
+  float: left;
+}
+
+.information .type {
+  display: inline;
+  background-color: #E35A4D; /* 背景色をピンクに */
+  padding: 3px 5px; /* 上下3px 左右5px */
+  font-size: 80%;
+  color: #FFF;
+}
+
+.description img {
+  float:left;
+  margin: 0 10px 10px 0;
+  transition: opacity 1s ease 0s;
+}
+
+.description {
+  clear: left;
+}
+
+.content {
+  background-color: #fff; /* 白 */
+  padding: 20px;
+}
+
+.songs {
+  margin: 0 0 20px; /* 下の余白のみ 20pxに */
+}
+
+.songs h2 {
+  clear: left;
+  font-size: 100%; /* フォントの大きさを本文と同じに */
+  font-weight: normal; /* フォントの太さを通常どうりに */
+  margin: 0;
+  background-color: #E6E4DD; /* 薄い茶色 */
+  padding: 5px 10px;
+}
+
+.songs ol {
+  padding: 0;
+  margin: 0;
+  list-style: decimal inside; /* リストのスタイルを算用数字に */
+}
+
+.songs li {
+  border-bottom: 1px solid #ccc; /* 要素の下にのみ枠線を引く */
+  width: 50%;
+  float: left;
+  padding: 5px 10px;
+}
+
+.clearfix:after {
+  content:" ";
+  display: table;
+  clear: both;
+}
+
+a {
+  color: #666; /* グレー */
+}
+
+footer {
+  text-align: center;
+  font-size: 80%;
+}
+
+@media only screen and (max-width:600px) {
+  .description img {
+    float: none;
+    display: block;
+    margin: 0 auto;
+  }
+
+  header {
+    padding: 5px;
+  }
+  header h1 {
+    font-size: 12px;
+  }
+  .description h1 {
+    font-size: 14px;
+  }
+  .songs li {
+    float: none;
+    width: inherit;
+  }
+}
+
+.description img:hover {
+  opacity: 0.5;
+}
